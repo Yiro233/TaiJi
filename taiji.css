@@ -1,0 +1,66 @@
+.yinyang {
+    width:100px;
+    height:100px;
+    position:relative;
+    margin:50px auto;
+    border-radius:100%;
+    background-color:#000;
+    animation:rotation 1s linear infinite;
+}
+.yinyang:before,.yinyang:after {
+    width:50px;
+    height:100px;
+    position:absolute;
+    top:0;display:block;
+    content:"";
+}
+.yinyang:before {
+    left:0;
+    border-radius:50px 0 0 50px;
+    background-color:#000;
+}
+.yinyang:after {
+    right:0;
+    border-radius:0 50px 50px 0;
+    background-color:#eee;
+}
+.yin,.yang {
+    width:50px;
+    height:50px;
+    position:absolute;
+    z-index:2;
+    border-radius:100%;
+}
+.yin {
+    top:0;
+    left:25px;
+    background-color:#000;
+}
+.yang {
+    bottom:0;
+    right:25px;
+    background-color:#eee;
+}
+.yin:after,.yang:after {
+    width:18.75px;
+    height:18.75px;
+    position:absolute;
+    z-index:3;
+    display:block;
+    content:"";
+    border-radius:100%;
+}
+.yin:after {
+    top:15px;
+    left:13.75px;
+    background-color:#eee;
+}
+.yang:after {
+    bottom:15px;
+    right:13.75px;
+    background-color:#000;
+}
+@keyframes rotation {
+    0% {transform:rotate(0deg);}
+    100% {transform:rotate(360deg);}
+}
